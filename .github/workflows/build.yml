@@ -1,7 +1,7 @@
 on:
   push:
     branches: 
-      - patrick
+      - master
 
 name: Build and Push a Docker Image
 
@@ -50,7 +50,7 @@ jobs:
 
       - name: Build, tag, and push images to Docker Hub
         run: |
-          docker build -t patrickabiaad/nk-backend-service:latest .
-          docker push patrickabiaad/nk-backend-service:latest
-          docker tag patrickabiaad/nk-backend-service:latest patrickabiaad/nk-backend-service:${{ github.run_number }}
-          docker push patrickabiaad/nk-backend-service:${{ github.run_number }}
+          docker build -t nicolaselkhoury44/nk-backend-service:latest .
+          docker push nicolaselkhoury44/nk-backend-service:latest
+          docker tag nicolaselkhoury44/nk-backend-service:latest nicolaselkhoury44/nk-backend-service:${{ github.run_number }}
+          docker push nicolaselkhoury44/nk-backend-service:${{ github.run_number }}
