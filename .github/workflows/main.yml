@@ -62,4 +62,4 @@ jobs:
             docker pull ${{secrets.DOCKER_USERNAME}}/$REPO
             docker stop backend
             docker rm backend
-            docker run -dp 1337:1337 --network TEST --name backend backend
+            docker run -dp 1338:1337 --network TEST --name backend backend
